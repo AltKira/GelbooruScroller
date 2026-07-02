@@ -39,7 +39,7 @@
 # 6. (optional) Edit any preferences in the configuration section
 # I recommend changing max image size (line 118)
 # 7. (optional) Edit blacklist options, but heed the warning!
-# 8. Run the program!
+# 8. Run the program
 
 # ============================================================
 # CONTROLS
@@ -110,7 +110,7 @@ BACKGROUND = (0,0,0)
 # Some basic exclusions, space is required before the first tag
 # Anything animated is excluded to get better results as videos are unable to be played
 # GIFs can be played, but its only the first frame of them so there isn't much point
-EXCLUDED_TAGS = " -animated -video -animated_gif -real_life -3d -loli -shota -pee -peeing -vomit -poop"
+EXCLUDED_TAGS = " -animated -video -animated_gif -loli -shota -pee -peeing -vomit -poop"
 
 # Images larger than this are resized before being stored in RAM
 # Change it to the resolution of your monitor to get the best resolution
@@ -241,7 +241,7 @@ def startup_menu():
             (255,255,255)
         )
 
-        screen.blit(title,(50,40))
+        screen.blit(title,(50,30))
 
         # ---------------- Tags ----------------
 
@@ -249,7 +249,7 @@ def startup_menu():
 
             label_font.render("Tags",True,(220,220,220)),
 
-            (60,95)
+            (60,85)
 
         )
 
@@ -295,9 +295,9 @@ def startup_menu():
 
         screen.blit(
 
-            label_font.render("Limit",True,(220,220,220)),
+            label_font.render("Max Images (Limit)",True,(220,220,220)),
 
-            (60,195)
+            (60,185)
 
         )
 
